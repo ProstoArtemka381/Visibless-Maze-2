@@ -1,11 +1,11 @@
-import ("SFML.System")
-
 function vm_init()
 	
 	pixs = Level:FindPixels(Pixel(255, 0, 0))
 	Player.Position = pixs[0]
 	
 	Level:SetMapPixel(Pixel(255,255,255), pixs[0].X, pixs[0].Y)
+	
+	Debug:PrintLine(Debug:ReadChar("input char: "))
 end
 
 function pl_moved()
@@ -19,7 +19,7 @@ function pl_moved()
 	
 	elseif pix == Pixel(255,255,0) then
 		Sounds:CleanSounds()
-		Window:Close()
+		Level:Close()
 		Debug:PrintLine("Finished!")
 	else
 		Sounds:PlaySound("steps.wav")
@@ -37,6 +37,8 @@ function move(key)
 		vec = Vector2i(-1, 0)
 	elseif key == "D" then
 		vec = Vector2i(1, 0)
+	else
+		return
 	end
 	
 	Player:Move(vec)
@@ -44,9 +46,11 @@ end
 
 function vm_key_released(key)
 	
+	Debug:PrintLine(key)
+	
 	if key == "Escape" then
 		Sounds:CleanSounds()
-		Window:Close()
+		Level:Close()
 	else
 		move(key)
 	end

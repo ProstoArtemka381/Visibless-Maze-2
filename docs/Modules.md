@@ -67,3 +67,13 @@ name | description
 **int** R | Red color of pixel
 **int** G | Green color of pixel
 **int** B | Blue color of pixel
+
+### Vector2i
+
+Constructor(int x, int y)
+
+Parameters
+name | description
+--- | ---
+**int** X | X position of vector
+**int** Y | Y position of vector
