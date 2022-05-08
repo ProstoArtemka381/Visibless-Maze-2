@@ -53,3 +53,16 @@ name and args | description
 --- | ---
 PlaySound(string path) | Play .wav file from path
 CleanSounds() | Function, which close all devices
+
+## Custom classes
+
+### Pixel
+
+Constructor(int red, int blue, int green)
+
+Parameters
+
+name | description
+R | Red color of pixel
+G | Green color of pixel
+B | Blue color of pixel
