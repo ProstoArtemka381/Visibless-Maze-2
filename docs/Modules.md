@@ -4,6 +4,7 @@ Example of module using:
 ```lua
 function vm_init()
 	Debug:Print("Start of program!")
+	Debug:PrintLine(Level.Name)
 end
 ```
 
