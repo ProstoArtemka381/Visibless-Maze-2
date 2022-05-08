@@ -1,11 +1,11 @@
 # Modules
 
 Example of module using:
-``
+```
 function vm_init()
 	Debug:Print("Start of program!")
 end
-``
+```
 
 ## There are list of VM2 modules
 
