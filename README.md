@@ -4,5 +4,4 @@ Here you can find some information about Visibless Maze 2.
 Documentation:
 1. [First steps](https://github.com/ProstoArtemka381/Visibless-Maze-2/blob/main/docs/First-Steps.md)
 2. [Debugging](https://github.com/ProstoArtemka381/Visibless-Maze-2/blob/main/docs/Debugging.md)
-3. List of functions
-4. Sound playing
+3. [Functions](https://github.com/ProstoArtemka381/Visibless-Maze-2/blob/main/docs/Functions.md)
