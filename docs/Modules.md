@@ -63,6 +63,7 @@ Constructor(int red, int blue, int green)
 Parameters
 
 name | description
+--- | ---
 R | Red color of pixel
 G | Green color of pixel
 B | Blue color of pixel
