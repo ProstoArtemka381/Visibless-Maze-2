@@ -9,7 +9,7 @@ Tile = {
 
 function the_end(ending) 
     Sounds:CleanSounds()
-    Window:Close()
+    Level:Close()
     Debug:PrintLine(ending)
 end
 
