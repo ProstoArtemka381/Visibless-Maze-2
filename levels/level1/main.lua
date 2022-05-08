@@ -4,8 +4,6 @@ function vm_init()
 	Player.Position = pixs[0]
 	
 	Level:SetMapPixel(Pixel(255,255,255), pixs[0].X, pixs[0].Y)
-	
-	Debug:PrintLine(Debug:ReadChar("input char: "))
 end
 
 function pl_moved()
