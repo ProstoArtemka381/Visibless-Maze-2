@@ -1,3 +1,4 @@
+## First steps
 For the start, you need to [download project](https://github.com/ProstoArtemka381/Visibless-Maze-2/releases/tag/first) and unzip "Visibless-Maze-2" file to any folder.
 
 Next, open "levels" folder and create folder with your first level name like "first-level".
