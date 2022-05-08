@@ -1,52 +1,48 @@
+import ("SFML.System")
+
+Tile = {
+    EMPTY  = Pixel(255,255,255),
+    PLAYER = Pixel(255, 0, 0),
+    EXIT   = Pixel(255,255,0),
+    WALL   = Pixel(0,0,0)
+}
+
+function the_end(ending) 
+    Sounds:CleanSounds()
+    Window:Close()
+    Debug:PrintLine(ending)
+end
+
 function vm_init()
-	
-	pixs = Level:FindPixels(Pixel(255, 0, 0))
-	Player.Position = pixs[0]
-	
-	Level:SetMapPixel(Pixel(255,255,255), pixs[0].X, pixs[0].Y)
+    Player.Position = Level:FindPixels(Tile.PLAYER)[0]
+    Level:SetMapPixel(Tile.EMPTY, Player.Position.X, Player.Position.Y)
 end
 
 function pl_moved()
-
-	pos = Player.Position
-	pix = Level:GetMapPixel(pos.X, pos.Y)
-	
-	if pix == Pixel(255,255,0) then
-		Sounds:CleanSounds()
-		Level:Close()
-		Debug:PrintLine("Finished!")
-	elseif pix ~= Pixel(255,255,255) then
-		Player.Position = Player.LastPosition
-		Sounds:PlaySound("wall.wav")
-	else
-		Sounds:PlaySound("steps.wav")
-	end
+    pix = Level:GetMapPixel(Player.Position.X, Player.Position.Y)
+    if pix == Tile.WALL then
+        Player.Position = Player.LastPosition
+        Sounds:PlaySound("wall.wav")
+    elseif pix == Tile.EXIT then
+        the_end("You Win")
+    else
+        Sounds:PlaySound("steps.wav")
+    end
 end
 
-function move(key)
-
-	vec = Vector2i(0,0)
-	if key == "W" then
-		vec = Vector2i(0, -1)
-	elseif key == "S" then
-		vec = Vector2i(0, 1)
-	elseif key == "A" then
-		vec = Vector2i(-1, 0)
-	elseif key == "D" then
-		vec = Vector2i(1, 0)
-	else
-		return
-	end
-	
-	Player:Move(vec)
-end
+KeyVec = {
+    W = Vector2i(0, -1),
+    S = Vector2i(0, 1),
+    A = Vector2i(-1, 0),
+    D = Vector2i(1, 0)
+}
 
 function vm_key_released(key)
-	
-	if key == "Escape" then
-		Sounds:CleanSounds()
-		Level:Close()
-	else
-		move(key)
-	end
+    if key == "Escape" then
+        the_end("You Give Up")
+    elseif KeyVec[key] then
+        Player:Move(KeyVec[key])
+    end
 end
+
+-- by Poet Luchnko
