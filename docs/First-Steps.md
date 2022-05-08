@@ -13,4 +13,4 @@ If you did it, your level will show in select menu
 
 ![Select menu](https://media.discordapp.net/attachments/696223941701664838/972749743623139339/unknown.png)
 
-Choose your level, if you did all correctly, black window will open in center of your screen.
+Choose your level, if you did all correctly, console will not close
