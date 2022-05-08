@@ -31,10 +31,10 @@ Close() | Close level
 
 name | description
 --- | ---
-(**string**) Name | Name of level
-(**int**) Width | Width of level
-(**int**) Height | Height of level
-(**Pixel\[\]\[\]**) Map | Array of arrays of pixels :)
+**string** Name | Name of level
+**int** Width | Width of level
+**int** Height | Height of level
+**Pixel\[\]\[\]** Map | Array of arrays of pixels :)
 
 ### List of Player functions
 name and args | description
@@ -45,8 +45,8 @@ GetPixel() | Return Pixel from player position
 ### List of Player params
 name | description
 --- | ---
-(**Vector2i**) Position | Position of player
-(**Vector2i**) LastPosition | Position before player's move
+**Vector2i** Position | Position of player
+**Vector2i** LastPosition | Position before player's move
 
 ### List of Sounds functions
 name and args | description
@@ -64,6 +64,6 @@ Parameters
 
 name | description
 --- | ---
-R | Red color of pixel
-G | Green color of pixel
-B | Blue color of pixel
+**int** R | Red color of pixel
+**int** G | Green color of pixel
+**int** B | Blue color of pixel
