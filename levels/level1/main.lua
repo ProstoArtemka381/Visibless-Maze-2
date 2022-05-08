@@ -44,8 +44,6 @@ end
 
 function vm_key_released(key)
 	
-	Debug:PrintLine(key)
-	
 	if key == "Escape" then
 		Sounds:CleanSounds()
 		Level:Close()
