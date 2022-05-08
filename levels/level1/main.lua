@@ -1,4 +1,4 @@
-import ("SFML.System")
+-- by Poet Luchnik
 
 Tile = {
     EMPTY  = Pixel(255,255,255),
@@ -44,5 +44,3 @@ function vm_key_released(key)
         Player:Move(KeyVec[key])
     end
 end
-
--- by Poet Luchnko
