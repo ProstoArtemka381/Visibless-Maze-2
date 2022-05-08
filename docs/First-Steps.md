@@ -1,16 +1,17 @@
 ## First steps
-For the start, you need to [download project](https://github.com/ProstoArtemka381/Visibless-Maze-2/releases/tag/first) and unzip "Visibless-Maze-2" file to any folder.
 
-Next, open "levels" folder and create folder with your first level name like "first-level".
+For starters, you will need to [download the project](https://github.com/ProstoArtemka381/Visibless-Maze-2/releases/tag/first) and unzip the "Visibless-Maze-2" archive to any folder.
 
-If you open game right now, you will see two errors,
+Next, open up the "levels" folder and create a folder with your first level, for example, "first-level".
+
+If you open the game right now, you will see 2 errors,
 
 ![Errors](https://media.discordapp.net/attachments/696223941701664838/972525694829592657/unknown.png)
 
-To fix those errors, you should create two files in your folder, main.lua and map.png.
+To fix these errors, you need to create 2 files in your folder, "main.lua" and "map.png".
 
-If you did it, your level will show in select menu
+If you've done that, your level will appear in the select menu.
 
 ![Select menu](https://media.discordapp.net/attachments/696223941701664838/972749743623139339/unknown.png)
 
-Choose your level, if you did all correctly, console will not close
+Choose your level. If you did everything correctly, a black window will open in the center of your screen.
