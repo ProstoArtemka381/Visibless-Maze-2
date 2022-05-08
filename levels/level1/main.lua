@@ -11,14 +11,13 @@ function pl_moved()
 	pos = Player.Position
 	pix = Level:GetMapPixel(pos.X, pos.Y)
 	
-	if pix ~= Pixel(255,255,255) then
-		Player.Position = Player.LastPosition
-		Sounds:PlaySound("wall.wav")
-	
-	elseif pix == Pixel(255,255,0) then
+	if pix == Pixel(255,255,0) then
 		Sounds:CleanSounds()
 		Level:Close()
 		Debug:PrintLine("Finished!")
+	elseif pix ~= Pixel(255,255,255) then
+		Player.Position = Player.LastPosition
+		Sounds:PlaySound("wall.wav")
 	else
 		Sounds:PlaySound("steps.wav")
 	end
